@@ -9,7 +9,7 @@ import javax.validation.constraints.Pattern;
 @Getter
 @Setter
 public class MemberPatchDto {
-    private Long memberId;
+    private long memberId;
 
     @NotSpace(message = "회원 이름은 공백이 아니어야 합니다.")
     private String name;
@@ -18,27 +18,4 @@ public class MemberPatchDto {
             message = "휴대폰 번호는 010으로 시작하는 11자리 숫자와 '-'로 구성되어야 합니다.")
     private String phone;
 
-    public Long getMemberId() {
-        return memberId;
-    }
-
-    public void setMemberId(Long memberId) {
-        this.memberId = memberId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
 }

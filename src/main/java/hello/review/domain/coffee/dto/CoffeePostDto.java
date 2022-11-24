@@ -11,9 +11,11 @@ import javax.validation.constraints.Pattern;
 public class CoffeePostDto {
     @NotBlank
     private String korName;
+
     @NotNull
     @Pattern(regexp = "^[A-Za-z]+(\\s?[A-Za-z]+)*$")
     private String engName;
+
     @NotNull
     @Range(min = 100, max = 50000)
     private Integer price;
