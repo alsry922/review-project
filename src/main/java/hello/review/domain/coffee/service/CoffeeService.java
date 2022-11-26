@@ -1,6 +1,7 @@
 package hello.review.domain.coffee.service;
 
 import hello.review.domain.coffee.entity.Coffee;
+import hello.review.values.Money;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,12 +16,12 @@ public class CoffeeService {
         return coffee;
     }
     public Coffee findCoffee(long coffeeId) {
-        return new Coffee(coffeeId, "아메리카노", "Americano", 2500);
+        return new Coffee(coffeeId, "아메리카노", "Americano", new Money(2500));
     }
     public List<Coffee> findCoffees() {
         return List.of(
-            new Coffee(1L, "아메리카노", "Americano", 2500),
-            new Coffee(2L, "카라멜 라떼", "Caramel Latte", 5000)
+            new Coffee(1L, "아메리카노", "Americano", new Money(2500)),
+            new Coffee(2L, "카라멜 라떼", "Caramel Latte", new Money(5000))
         );
     }
     public void deleteCoffee(long coffeeId) {

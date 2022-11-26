@@ -1,5 +1,6 @@
 package hello.review.domain.coffee.entity;
 
+import hello.review.values.Money;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,5 +17,5 @@ public class Coffee {
 
     private String engName;
 
-    private int price;
+    private Money price;
 }
